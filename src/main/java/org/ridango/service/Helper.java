@@ -114,9 +114,9 @@ public class Helper {
                 LocalTime departureTime = LocalTime.parse(data.departureTime);
                 Duration timeUntilDeparture = Duration.between(currentTime, departureTime);
                 int relativeMinutes = (int) timeUntilDeparture.toMinutes();
-                formattedDepartureTime = String.format("RouteID: %d %d minutes from now", data.routeId, relativeMinutes);
+                formattedDepartureTime = String.format("Bus: %d %dmin", data.routeId, relativeMinutes);
             } else {
-                formattedDepartureTime = String.format("RouteID: %d %s", data.routeId, data.departureTime);
+                formattedDepartureTime = String.format("Bus: %d %s", data.routeId, data.departureTime);
             }
 
             if (count < numBuses) {
